@@ -18,5 +18,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Basic sanity check
-        run: python -c "print('CI running successfully')"
+      - name: Run tests
+        run: |
+           pip install pytest
+           pytest
